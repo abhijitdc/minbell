@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base: '/minbell/', // Set base path for GitHub Pages
+  base: '/', // Set base path for root domain deployment
   test: {
     globals: true,
     environment: 'jsdom',

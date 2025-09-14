@@ -23,6 +23,10 @@ A simple and aesthetically pleasing interval timer application with Material Des
     ```
 3.  Open the application in your browser at the address provided by Vite.
 
+## Deployment
+
+The application is deployed at: [https://www.ayumitra.life](https://www.ayumitra.life)
+
 ## How to run tests
 
 1.  Run the tests:
