@@ -86,3 +86,5 @@ dist/
 src/**/*.js
 src/**/*.jsx
 src/**/*.d.ts
+
+error*.png
