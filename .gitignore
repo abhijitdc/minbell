@@ -82,10 +82,7 @@ web_modules/
 .vite/
 dist/
 
-# TypeScript compiled files
-src/**/*.js
-src/**/*.jsx
-src/**/*.d.ts
+
 
 error*.png
 *DS_Store*
