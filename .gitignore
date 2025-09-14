@@ -68,7 +68,6 @@ web_modules/
 
 # gatsby files
 .cache/
-public/
 
 # Editor directories and files
 .idea/
@@ -82,3 +81,8 @@ public/
 # Vite
 .vite/
 dist/
+
+# TypeScript compiled files
+src/**/*.js
+src/**/*.jsx
+src/**/*.d.ts
