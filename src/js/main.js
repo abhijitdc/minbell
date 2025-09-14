@@ -1,5 +1,7 @@
 import { Timer } from './timer.js';
+import { getRandomImage, updateImage } from './image-display.js';
 
+const characterImage = document.getElementById('character-image');
 const durationInput = document.getElementById('duration');
 const intervalSelect = document.getElementById('interval');
 const startButton = document.getElementById('start');
@@ -31,6 +33,7 @@ function setRandomGradient() {
 }
 
 function drawProgress(ctx, canvas, percentage, color) {
+    if (!ctx) return;
     const centerX = canvas.width / 2;
     const centerY = canvas.height / 2;
     const radius = canvas.width / 2 - 10; // Padding
@@ -104,6 +107,7 @@ startButton.addEventListener('click', () => {
 
     timer.onInterval(() => {
         intervalEndSound.play();
+        updateImage(characterImage, getRandomImage());
     });
 
     timer.onDone(() => {
@@ -164,3 +168,4 @@ document.querySelectorAll('button').forEach(button => {
 
 updateIntervalOptions();
 setRandomGradient(); // Call on page load
+updateImage(characterImage, getRandomImage());
