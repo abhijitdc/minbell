@@ -1,6 +1,7 @@
 :root {
     --gradient-start: #a1c4fd; /* Default start color */
     --gradient-end: #c2e9fb;   /* Default end color */
+    --character-image: url('');
 
     /* Material Design inspired colors */
     --md-primary: #3F51B5; /* Indigo 500 */
@@ -24,31 +25,32 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
-    background-size: 400% 400%;
-    animation: gradientAnimation 15s ease infinite;
+    background: #f7f7f7; /* New background color */
     color: var(--md-text-primary);
     overflow: hidden; /* Prevent scrollbars from gradient animation */
 }
 
-@keyframes gradientAnimation {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+.character-image {
+    max-width: clamp(50px, 20vw, 300px);
+    max-height: clamp(50px, 20vh, 300px);
+    margin-top: 1vmin;
 }
 
 #app {
-    background-color: var(--md-surface);
+    position: relative;
+    z-index: 2;
+    background-color: #fafafa; /* Changed to #fafafa */
     padding: 3.5vmin; /* Adjusted padding */
     border-radius: 8px;
     box-shadow: 0 4px 8px var(--md-shadow-color), 0 6px 20px var(--md-shadow-color);
     text-align: center;
     max-width: 95vw;
-    width: 700px;
+    width: min(700px, 95vw); /* Use min() for flexible width */
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     gap: 2.5vmin; /* Adjusted gap */
+    margin: auto; /* Center the app horizontally and vertically */
 }
 
 h1 {
@@ -160,22 +162,26 @@ button#stop:hover {
     margin-bottom: 4vmin;
     color: var(--md-text-primary);
     letter-spacing: -0.05em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .progress-indicators {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: 3vmin; /* Adjusted gap */
+    align-items: center;
+    gap: 1vmin; /* Reduced gap */
     margin-top: 3vmin;
 }
 
 canvas {
     border: none;
     border-radius: 50%;
-    width: clamp(100px, 25vw, 200px); /* Adjusted responsive size */
-    height: clamp(100px, 25vw, 200px);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 3px 10px rgba(0, 0, 0, 0.08);
+    width: clamp(50px, 10vw, 100px);
+    height: clamp(50px, 10vh, 100px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 3dpx 10px rgba(0, 0, 0, 0.08);
     background-color: var(--md-background);
 }
 
