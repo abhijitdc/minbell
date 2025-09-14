@@ -1,6 +1,6 @@
 # Interval Timer
 
-A simple application to help you track intervals for various activities.
+A simple and aesthetically pleasing interval timer application with Material Design inspired UI.
 
 ## Features
 
@@ -9,6 +9,7 @@ A simple application to help you track intervals for various activities.
 *   Use .wav audio files from the assets directory for reminders.
 *   The interval options are dynamically adjusted to be clean divisors of the duration.
 *   Visual progress indicators for current interval and overall duration.
+*   Reset option for the timer.
 
 ## How to run
 
